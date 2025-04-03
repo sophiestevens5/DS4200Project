@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS4200 Ski Resort Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header-container {
+            background-color: #0056b3; /* Deep blue background */
+            color: white; /* White text */
+            padding: 20px 0; /* Padding around the text */
+            text-align: center; /* Center-align the text */
+        }
+        header h1, header p {
+            color: white; /* Ensures all text in the header is white */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            display: flex;
+            justify-content: center;
+            background-color: #004080; /* Slightly darker blue for the nav background */
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white; /* Change color to white */
+            font-weight: 500;
+        }
+        nav ul li a:hover {
+            background-color: #002040; /* Even darker for hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>DS4200 Ski Resort Analysis</h1>
+            <p>Unveiling the Dynamics of Resort Traffic, Weather Patterns, and Terrain Diversity</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="project.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="visualizations.html">Visualizations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <section class="sankey-container">
+    <h2>Resort to Snowfall Interactive Flow</h2>
+    <svg id="sankey" width="960" height="500"></svg>
+    <p>This Sankey diagram shows the relationship between 3 West Coast ski resorts – Jackson Hole, Telluride, and Snowbird – and the distribution of their 24-hour snowfall across various ranges. The chart shows how each resort experiences different snowfall intensities in categories such as 0-5 cm, 5-10 cm, 10-15 cm, 15-20 cm, and >20 cm. Snowbird receives heavier snowfalls, particularly in the  >20 cm ranges, followed by Jackson Hole. This reflects the region's mountainous terrain, which is known for substantial snow accumulation and potentially more expert skiers. Telluride’s snowfall is in the 0-5 cm and 5-10 cm range, indicating a lighter snowfall and maybe more suited for beginners. The diagram’s color-coding and proportional flows make it easy to compare the snow conditions of each resort, allowing skiers to quickly assess which resorts are likely to experience heavier or lighter snow conditions during a given time.
+      The design of the Sankey diagram emphasizes clarity and ease of comparison. The color coding provides an intuitive way to distinguish between the different levels of snowfall, such as blue for light snowfall and green for heavier snowfalls. The flow lines visually represent the amount of snowfall each resort received within the specified ranges, with thicker lines indicating larger proportions. This makes it easy to see the distribution of snowfall at a glance. The horizontal layout of the diagram allows for a simple comparison between the resorts, with each resort represented by a vertical bar on the left, and the snowfall ranges on the right. This approach efficiently illustrates the relationship between the resorts and snowfall patterns, giving the viewer a clear picture of which resorts are more likely to receive heavy snowfalls versus those with more moderate or consistent snowfall. The Sankey diagram’s design ensures that the data is presented in a visually appealing yet informative way, making it an ideal tool for understanding complex snowfall distributions across multiple resorts.
+      </p>
+  </section>
+
+  <section class="visualization-grid">
+
+    <div class="visualization-card">
+      <h2>Altitude vs Social Engagement</h2>
+      <img src="altitude_boxplot.png" alt="Boxplot of Altitude and Social Media Engagement">
+      <p>The boxplot provides a comparison of the altitudes of ski resorts across the East Coast and West Coast of the United States. There is a clear difference between the altitude of west coast resorts versus east coast resorts. Ski resorts on the West Coast (e.g., Colorado, Utah, Wyoming) are shown to be much higher in altitude, with many resorts reaching over 3,000 meters. In contrast, resorts on the East Coast (e.g., New Hampshire, Vermont, Maine) have much lower altitudes, typically below 1,500 meters, which can result in less extreme skiing experiences and different snow conditions. This highlights the significant role altitude plays in shaping the skiing experience, from the type of terrain to the quality of snow.
+        The design of this boxplot is to highlight the differences in altitude across ski resorts in a clear and concise way. It allows for a visual representation of the median and the interquartile range of altitude data, providing a comprehensive overview of altitude distribution for each region. The distinction between the two coasts is made using color coding, with the east coast resorts represented in blue and the west coast resorts in green. This helps the viewer immediately grasp the regional distinctions. Additionally, the presence of outliers is marked which can help offer further insights into the variation within each region. The boxplot is ideal for comparing distributions and this scenario, as it presents key statistical information in an easily digestible format, making it especially useful for visualizing how altitude influences ski resort characteristics across different regions.
+        </p>
+    </div>
+
+    <div class="visualization-card">
+      <h2>U.S. Ski Resorts Precipitation Trends</h2>
+      
+      <img src="westmonthly_precipitation.png" alt="Monthly Precipitation Trends in Western Ski Resorts">
+      <img src="eastmonthly_precipitation.png" alt="Monthly Precipitation Trends in Eastern Ski Resorts">
+      
+      <p>The two line charts illustrate the monthly trends in precipitation and snowfall for West Coast states (Wyoming, Colorado, Utah) and East Coast states (Vermont, New Hampshire, Maine) from 2009 to 2017. The data shows that the most snowfall happens during the winter months (November to March), with Wyoming and Colorado receiving the most snow on the West Coast. In contrast, East Coast states see significantly higher precipitation, with rainfall reaching up to ~450mm, which can contribute to icier conditions. This highlights a distinct difference between the two coasts: while the West Coast may offer more favorable skiing conditions with fewer icy conditions, East Coast resorts face more challenging, icy conditions during the winter months.</p>
+  
+      <p>The design of the charts was intended to offer a clear comparison between the two regions, using multiple lines—with dotted lines for precipitation and solid lines for snowfall—to allow users to easily differentiate between the two weather patterns. The line chart format effectively visualizes trends over time, providing a straightforward way to compare seasonal data across states. The minimalistic design focuses on key patterns relevant for skiers, such as snowfall peaks and precipitation differences, while avoiding unnecessary clutter.</p>
+  </div>
+
+    <div class="visualization-card">
+      <h2>Dashboard: Category vs Value</h2>
+      <select id="filterSelect">
+        <option value="all">All</option>
+      </select>
+      <div id="plotlyChart" style="width:100%;height:400px;"></div>
+      <p>Interactive bar chart showing value distributions by selected categories.</p>
+    </div>
+  </section>
+
+  <section class="summary">
+    <h2>Key Insights</h2>
+    <ul>
+      <p>Over the course of this project, we have learned through this process of cleaning the data, understanding what the data means, building visualizations with the data that choosing a mountain to ski requires a number of important factors. Firstly snowfall and precipitation, while obvious factors, are incredibly important when figuring out the right area of the country to go to because the more annual snowfall the better skiing opportunities there are. If there is heavy precipitation, then that can harm the amount of snow that is around during the year and cause for more icy conditions rather than powdery ones. As skiers, we value having snowier conditions over icy conditions because there is less opportunities for injury to occur, and so therefore areas like Colorado, Wyoming, and Utah are the most favorable states to ski. Secondly, as skiers that value slope variety across blues, greens, and blacks, we appreciate seeing which coast, east or west, has more variety in their slopes. What can be done in the future is to zero in on a specific mountain and really try to build a detailed visualization of what the mountain runs look like, average elevation climbed for the mountain, amenities on the mountain, and implementing average price data so that users can have more discretion over how to select a mountain. To do that would take some time given how complex the mountains can be, the fluctuation in the pricing of tickets, and the scarce information about the amenities on the mountain. </p>
+    </ul>
+  </section>
+
+  <section class="references">
+    <h2>References</h2>
+    <ul>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9780482/">Influencing Factors of Destination Choice of Ski Tourism Enthusiasts</a></li>
+      <li><a href="https://www.tandfonline.com/doi/full/10.1080/13683500.2017.1410110">A Critical Review of Climate Change Risk for Ski Tourism</a></li>
+      <li><a href="https://www.researchgate.net/publication/338946401_THE_RESEARCH_OF_SKIER_MOTIVATIONS_AND_FACTORS_INFLUENCING_THE_CHOICE_OF_A_SKI_DESTINATION">Skier Motivations and Factors Influencing the Choice of a Ski Destination</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DS4200 Team Project. All rights reserved.</p>
+  </footer>
+
+  <script src="project.js"></script>
+</body>
+</html>

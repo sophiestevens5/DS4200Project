@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Welcome to DS4200 Project</h1>
+            <p>Exploring the Impact of Various Factors on Ski Resort Traffic and Tourism</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="project.html">Home</a></li> 
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="visualizations.html">Visualizations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Project Introduction</h2>
+        <p>Ski resorts are an extremely popular destination in the U.S and attract millions of visitors. Due to their popularity, there is a wide range of resorts, each that offers different activities and excursions and cost-varying rates per night. Our goal is to analyze different datasets and find a correlation between factors that are present in different U.S. ski resorts and how they lead to increased or decreased traffic and tourism at each respective resort. The topic is something we are incredibly passionate about because as skiers, we have to take into account a number of important factors when making a decision about what mountain to ski on. We specifically wanted to look at snowfall and terrain difficulty because those factors are the most important, while pricing and amenities are ancillary factors. By leveraging data visualizations, have been able to build a project that will help users decide which mountains they should go to, and which mountains they should avoid. 
+            The tasks we had to focus on during this project was data cleaning, figuring out which visualizations are important for skiers, how to build the data visualizations, and designing the website to be aesthetically pleasing and easy to navigate. We leveraged each other's skill sets to ensure we are working cohesively and that the question of how to make a decision on which mountain to ski at is addressed. As a team we worked together to divide the tasks and distribute to ensure all members were able to build strong visualizations that would positively help website users. 
+        </p>
+        <img src="mountain.avif" alt="Swiss Alps" width="700" height="300">
+    </section>
+        <h2>About our Data</h2>
+        <p>The datasets used for this analysis provide a comprehensive comparison of East Coast and West Coast ski resorts in the United States, focusing on snow conditions, slope difficulties, and precipitation patterns. The data was sourced from Github and Kaggle. The data spans multiple CSV files, with a ski resorts file detailing slope difficulty percentages (easy, intermediate, and difficult) across the United States. It included a count of 357 green slopes, 360 blue slopes, and 351 black slopes. The data was then normalized to ensure the percentages sum to 100% for each level of difficulty. Additional datasets, such as precip_state.csv (1,000 rows and 5 columns) and snow_state.csv (1,200 rows and 6 columns), providing regional precipitation and snowfall data, covering the years 2009-2017. Resort-specific snowfall data, including 24 hr New Snow and Season Snowfall Total, was also collected for Jackson Hole, Snowbird, and Telluride, each with around 1,000 rows and 8 columns. The data was cleaned by removing rows with missing values and converting string-based measurements (e.g., “cm”) to numeric values. The last data set we used had 43 columns and 5,470 entries on ski resorts and their different attributes like altitude, location, difficulty levels, restaurants, family activities, etc. The data was cleaned and we pulled 5 main columns regarding the State/Province in which the resort was located, the altitude, and the three levels of difficulty and it was brought down to 4,490 entries. All the steps of collecting the data and scraping  allowed for meaningful comparisons between East and West Coast resorts, providing valuable insights into terrain offerings and snow conditions. 
+        </p>
+        <img src="skiier.jpg" alt="skiier" width="700" height="300">
+    </section>
+    <footer>
+        <p>&copy; 2025 DS4200 Team Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
